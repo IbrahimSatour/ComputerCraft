@@ -20,8 +20,20 @@ function backToZero()
   turtle.turnRight() for i=1,15 do turtle.forward() end turtle.turnRight() turtle.down()
 end
 
+function cleanUp()
+  for i=1,16 do
+    turtle.select(i) fill = turtle.getItemCount()
+    if fill ~= 0 then data = turtle.getItemDetail()
+      if data.name == "minecraft:cobblestone" then turtle.drop(64) end
+      if data.name == "minecraft:dirt" then turtle.drop(64) end
+      if data.name == "minecraft:gravel" then turtle.drop(64) end
+      if data.name == "minecraft:sand" then turtle.drop(64) end
+    end
+  end
+end
+
 function layerDig()
-  startPos() for i=1,7 do digLane() turnRight() digLane() turnLeft() end digLane() turnRight() digLane() backToZero()
+  startPos() for i=1,7 do digLane() turnRight() digLane() turnLeft() end digLane() turnRight() digLane() backToZero() cleanUp()
 end
 
 layerDig(true)
