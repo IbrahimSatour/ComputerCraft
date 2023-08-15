@@ -20,7 +20,7 @@ function backToZero()
   turtle.turnRight() for i=1,15 do turtle.forward() end turtle.turnRight() turtle.down()
 end
 
-function layerDigger()
+function layerDig()
   startPos()
   digLane() turnRight()
   digLane() turnLeft()
@@ -39,3 +39,5 @@ function layerDigger()
   digLane() turnRight()
   digLane() backToZero()
 end
+
+layerDig(true)
