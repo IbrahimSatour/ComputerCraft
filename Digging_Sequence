@@ -1,5 +1,18 @@
+function startPos()
+  turtle.digDown() turtle.down() turtle.digDown()
+end
+
 function digLane()
   for i=1,15 do
     turtle.dig() turtle.forward() turtle.digDown()
   end
 end
+
+function turnR()
+  turtle.turnRight() turtle.dig() turtle.forward() turtle.digDown() turtle.turnRight()
+end
+
+function turnL()
+  turtle.turnLeft() turtle.dig() turtle.forward() turtle.digDown() turtle.turnLeft()
+end
+
