@@ -38,6 +38,6 @@ end
 do
   for i=1,layers do
     startPos() for i=1,7 do digLane() turnRight() digLane() turnLeft() end digLane() turnRight() digLane()
-    backToZero() cleanUp() print("Layer "..layers.." cleared successfully!")
+    backToZero() cleanUp() print("Layer "..i.." cleared successfully!")
   end
 end
