@@ -8,11 +8,34 @@ function digLane()
   end
 end
 
-function turnR()
+function turnRight()
   turtle.turnRight() turtle.dig() turtle.forward() turtle.digDown() turtle.turnRight()
 end
 
-function turnL()
+function turnLeft()
   turtle.turnLeft() turtle.dig() turtle.forward() turtle.digDown() turtle.turnLeft()
 end
 
+function backToZero()
+  turtle.turnRight() for i=1,15 do turtle.forward() end turtle.turnRight() turtle.down()
+end
+
+function layerDigger()
+  startPos()
+  digLane() turnRight()
+  digLane() turnLeft()
+  digLane() turnRight()
+  digLane() turnLeft()
+  digLane() turnRight()
+  digLane() turnLeft()
+  digLane() turnRight()
+  digLane() turnLeft()
+  digLane() turnRight()
+  digLane() turnLeft()
+  digLane() turnRight()
+  digLane() turnLeft()
+  digLane() turnRight()
+  digLane() turnLeft() 
+  digLane() turnRight()
+  digLane() backToZero()
+end
