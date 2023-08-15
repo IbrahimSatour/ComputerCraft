@@ -34,6 +34,7 @@ end
 
 function layerDig()
   for i=1,1 do
-    startPos() for i=1,7 do digLane() turnRight() digLane() turnLeft() end digLane() turnRight() digLane() backToZero() cleanUp() print("Layer "..i.." cleared successfully!")
+    startPos() for i=1,7 do digLane() turnRight() digLane() turnLeft() end digLane() turnRight() digLane()
+    backToZero() cleanUp() print("Layer "..i.." cleared successfully!")
   end
 end
