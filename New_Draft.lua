@@ -13,7 +13,7 @@ end
 clear() print("Please define the width for you quarry in blocks") width = read()
 clear() print("width is set to "..width)
 
-print("Please define the depth for your quarry in blocks") depth = read()
+clear() print("Please define the depth for your quarry in blocks") depth = read()
 clear() print("Width is set to "..width) print("Depth is set to "..depth)
 
 print("Width is set to "..width) print("Depth is set to "..depth) print("Digging sequence starting in 5") sleep(1) clear()
