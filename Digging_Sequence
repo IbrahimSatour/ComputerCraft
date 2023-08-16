@@ -1,6 +1,3 @@
-layers = depth / 2
-depth = 64
-
 -- functions
 
 function startPos()
@@ -37,9 +34,16 @@ function cleanUp()
   end
 end
 
+function digLayer()
+  startPos() for i=1,7 do digLane() turnRight() digLane() turnLeft() end digLane() turnRight() digLane()
+  backToZero() cleanUp()
+end
+
 -- main command
 
+layers = depth / 2
+depth = 64
+
 for i=1,layers do
-    startPos() for i=1,7 do digLane() turnRight() digLane() turnLeft() end digLane() turnRight() digLane()
-    backToZero() cleanUp() print("Layer "..i.." cleared successfully!")
+  digLayer() print("Layer "..i.." cleared successfully!")
 end
