@@ -11,7 +11,17 @@ function clear()
 end
 
 clear() print("Please define the width for you quarry in blocks") width = read()
-clear() print("Please define the depth for your quarry in blocks") depth = read()
+clear() print("width is set to "..width)
+
+print("Please define the depth for your quarry in blocks") depth = read()
+clear() print("Width is set to "..width) print("Depth is set to "..depth)
+
+print("Digging sequence starting in 5") sleep(1) clear()
+print("Digging sequence starting in 4") sleep(1) clear()
+print("Digging sequence starting in 3") sleep(1) clear()
+print("Digging sequence starting in 2") sleep(1) clear()
+print("Digging sequence starting in 1") sleep(1) clear()
+Print("Digging sequence successfully initiated")
 
 walkLength = width - 1
 cycles = (width / 2) - 1
@@ -68,4 +78,4 @@ for i=1,depth do
   turtle.up()
 end
 
-print("Digging sequence finished successfully!")
+clear() print("Digging sequence finished successfully!")
