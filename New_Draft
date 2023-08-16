@@ -9,6 +9,7 @@ print("Please define the depth for your quarry in blocks")
 
 define new variables
   width
+  walkLength = width - 1
   depth
   layers = depth / 2
 
