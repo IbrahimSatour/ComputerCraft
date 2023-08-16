@@ -19,7 +19,7 @@ print("Width is set to "..width) print("Depth is set to "..depth) print("Digging
 print("Width is set to "..width) print("Depth is set to "..depth) print("Digging sequence starting in 3") sleep(1) clear()
 print("Width is set to "..width) print("Depth is set to "..depth) print("Digging sequence starting in 2") sleep(1) clear()
 print("Width is set to "..width) print("Depth is set to "..depth) print("Digging sequence starting in 1") sleep(1) clear()
-Print("Digging sequence successfully initiated!")
+print("Digging sequence successfully initiated!") sleep(1)
 
 walkLength = width - 1
 cycles = (width / 2) - 1
