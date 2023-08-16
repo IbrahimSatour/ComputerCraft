@@ -1,6 +1,7 @@
 -- Smart Quarry v1.0
 -- Quarry system with cutomizable dimensions
 -- Drops cobblestone, gravel, and sand periodically
+-- minmum width is 4, minimum depth is 2
 
 -- user input
 
