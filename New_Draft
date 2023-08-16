@@ -10,6 +10,7 @@ print("Please define the depth for your quarry in blocks")
 define new variables
   width
   walkLength = width - 1
+  cycles = (width / 2) - 1
   depth
   layers = depth / 2
 
@@ -20,7 +21,7 @@ function startPos()
 end
 
 function digLane()
-  for i=1,15 do
+  for i=1,walkLength do
     turtle.dig() turtle.forward() turtle.digDown()
   end
 end
@@ -34,7 +35,7 @@ function turnLeft()
 end
 
 function backToZero()
-  turtle.turnRight() for i=1,15 do turtle.forward() end turtle.turnRight() turtle.down()
+  turtle.turnRight() for i=1,walkLength do turtle.forward() end turtle.turnRight() turtle.down()
 end
 
 function cleanUp()
@@ -50,15 +51,12 @@ function cleanUp()
 end
 
 function digLayer()
-  startPos() for i=1,7 do digLane() turnRight() digLane() turnLeft() end digLane() turnRight() digLane()
+  startPos() for i=1,cycles do digLane() turnRight() digLane() turnLeft() end digLane() turnRight() digLane()
   backToZero() cleanUp()
 end
 
 -- final command
 
-layers = depth / 2
-depth = 64
-
 for i=1,layers do
-  digLayer() print("Layer "..i.." cleared successfully!")
+  digLayer()
 end
