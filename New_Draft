@@ -4,8 +4,12 @@
 
 -- user input
 
-width
-depth
+print("Please define the width for you quarry in blocks")
+print("Please define the depth for your quarry in blocks")
+
+define new variables
+  width
+  depth
 
 -- functions
 
