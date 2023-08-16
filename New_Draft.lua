@@ -1,4 +1,3 @@
-'''lua
 -- Smart Quarry v1.0
 -- Quarry system with cutomizable dimensions
 -- Drops cobblestone, gravel, and sand periodically
@@ -68,4 +67,3 @@ for i=1,depth do
 end
 
 print("Digging sequence finished successfully!")
-'''
