@@ -10,8 +10,8 @@ function clear()
   term.setCursorPos(1,1)
 end
 
-clear() print("Please define the width for you quarry in blocks") width = input()
-clear() print("Please define the depth for your quarry in blocks") depth = input()
+clear() print("Please define the width for you quarry in blocks") width = read()
+clear() print("Please define the depth for your quarry in blocks") depth = read()
 
 walkLength = width - 1
 cycles = (width / 2) - 1
