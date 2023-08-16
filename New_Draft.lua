@@ -5,15 +5,17 @@
 
 -- user input
 
-print("Please define the width for you quarry in blocks")
-print("Please define the depth for your quarry in blocks")
+function clear()
+  term.clear()
+  term.setCursorPos(1,1)
+end
 
-define new variables
-  width
-  walkLength = width - 1
-  cycles = (width / 2) - 1
-  depth
-  layers = depth / 2
+clear() print("Please define the width for you quarry in blocks") width = input()
+clear() print("Please define the depth for your quarry in blocks") depth = input()
+
+walkLength = width - 1
+cycles = (width / 2) - 1
+layers = depth / 2
 
 -- functions
 
