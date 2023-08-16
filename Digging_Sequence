@@ -1,5 +1,5 @@
-depth = 64
 layers = depth / 2
+depth = 64
 
 -- functions
 
