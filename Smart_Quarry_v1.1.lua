@@ -10,6 +10,7 @@ function clear()
   term.setCursorPos(1,1)
 end
 
+clear() print("Do you wish to terminate cobblestone when dropped? y/n") terminate = read()
 clear() print("Please define the width for you quarry in blocks") width = read()
 clear() print("Please define the depth for your quarry in blocks") depth = read()
 clear()
@@ -53,7 +54,7 @@ function turnLeft()
 end
 
 function backToZero()
-  turtle.turnRight() turtle.select(1) turtle.place() sleep(8) turtle.place() for i=1,walkLength do turtle.forward() end turtle.turnRight() turtle.down()
+  turtle.turnRight() turtle.down() turtle.select(1) turtle.place() sleep(8) turtle.place() for i=1,walkLength do turtle.forward() end turtle.turnRight()
 end
 
 function cleanUp()
@@ -66,7 +67,9 @@ function cleanUp()
       if data.name == "minecraft:sand" then turtle.drop(64) end
     end
   end
-  turtle.select(1) turtle.place() sleep(1) turtle.place()
+  if terminate == ("y") then
+    turtle.select(1) turtle.place() sleep(1) turtle.place()
+  end
 end
 
 function digLayer()
