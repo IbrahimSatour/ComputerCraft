@@ -68,7 +68,7 @@ function cleanUp()
     end
   end
   if terminate == ("y") then
-    sleep(4) turtle.select(1) turtle.place() sleep(1) turtle.place()
+    sleep(4) turtle.select(1) turtle.place() sleep(1) turtle.place() turtle.select(1)
   end
 end
 
