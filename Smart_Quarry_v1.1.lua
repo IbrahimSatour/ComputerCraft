@@ -14,11 +14,18 @@ clear() print("Please define the width for you quarry in blocks") width = read()
 clear() print("Please define the depth for your quarry in blocks") depth = read()
 clear()
 
-print("Width is set to "..width) print("Depth is set to "..depth) print("Digging sequence starting in 5") sleep(1) clear()
-print("Width is set to "..width) print("Depth is set to "..depth) print("Digging sequence starting in 4") sleep(1) clear()
-print("Width is set to "..width) print("Depth is set to "..depth) print("Digging sequence starting in 3") sleep(1) clear()
-print("Width is set to "..width) print("Depth is set to "..depth) print("Digging sequence starting in 2") sleep(1) clear()
-print("Width is set to "..width) print("Depth is set to "..depth) print("Digging sequence starting in 1") sleep(1) clear()
+function stateWidth()
+  print("Width is set to "..width)
+end
+
+function stateDepth()
+  print("Depth is set to "..depth)
+end
+
+for i=5,1 do
+  stateWidth() stateDepth() print("") print("Digging sequence starting in "..i) sleep(1) clear()
+end
+
 print("Digging sequence successfully initiated!") sleep(1)
 
 walkLength = width - 1
@@ -46,7 +53,7 @@ function turnLeft()
 end
 
 function backToZero()
-  turtle.turnRight() for i=1,walkLength do turtle.forward() end turtle.turnRight() turtle.down()
+  turtle.turnRight() turtle.select(1) turtle.place() sleep(8) turtle.place() for i=1,walkLength do turtle.forward() end turtle.turnRight() turtle.down()
 end
 
 function cleanUp()
@@ -59,6 +66,7 @@ function cleanUp()
       if data.name == "minecraft:sand" then turtle.drop(64) end
     end
   end
+  turtle.select(1) turtle.place() sleep(1) turtle.place()
 end
 
 function digLayer()
