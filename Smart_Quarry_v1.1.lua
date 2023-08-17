@@ -1,7 +1,7 @@
--- Smart Quarry v1.0
+-- Smart Quarry v1.1
 -- Quarry system with cutomizable dimensions
--- Drops cobblestone, gravel, and sand periodically
--- minmum width is 4, minimum depth is 2
+-- Drops cobblestone, dirt, gravel, and sand periodically
+-- minmum width of 4, minimum depth of 2
 
 -- user input
 
@@ -12,7 +12,7 @@ end
 
 clear() print("Please define the width for you quarry in blocks") width = read()
 clear() print("Please define the depth for your quarry in blocks") depth = read()
-clear() print("Width is set to "..width) print("Depth is set to "..depth) clear()
+clear()
 
 print("Width is set to "..width) print("Depth is set to "..depth) print("Digging sequence starting in 5") sleep(1) clear()
 print("Width is set to "..width) print("Depth is set to "..depth) print("Digging sequence starting in 4") sleep(1) clear()
