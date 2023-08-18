@@ -1,4 +1,5 @@
 while true do
+  sleep(1)
   signal = redstone.getInput("right")
   ground = turtle.detectDown()
   if signal == true then
