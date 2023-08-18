@@ -1,12 +1,10 @@
 while true do
-  signal = redstone.getInput("right")
-  if signal == true then
+  while redstone.getInput() == true do
     sleep(1)
-    level = turtle.detectDown()
-    if level == true then
-      for i=1,3 do turtle.up() end
+    while turtle.detectDown() == true do
+      for i=1,28 do turtle.up() end
     else 
-      for i=1,3 do turtle.down() end
+      for i=1,28 do turtle.down() end
     end
   end
 end
