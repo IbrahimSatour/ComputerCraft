@@ -1,6 +1,6 @@
 while true do
   signal = redstone.getInput("right")
-  if signal = true then
+  if signal == true then
     sleep(1)
     level = turtle.detectDown()
     if level == true then
