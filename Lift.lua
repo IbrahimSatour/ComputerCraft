@@ -1,5 +1,5 @@
 while true do
-  while redstone.getInput() == true do
+  while redstone.getInput("right") == true do
     sleep(1)
     while turtle.detectDown() == true do
       for i=1,28 do turtle.up() end
