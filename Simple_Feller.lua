@@ -1,0 +1,2 @@
+while turtle.detect() do
+  
