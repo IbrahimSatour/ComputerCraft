@@ -33,6 +33,6 @@ posUp()
 
 repeat
   stepDown()
-until turtle.inspectDown() = "minecraft:dirt"
+until turtle.inspectDown() == "minecraft:dirt"
 
 clear() print("Big tree slain like it's nothing!")
