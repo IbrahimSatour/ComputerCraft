@@ -16,6 +16,11 @@ function stepDown()
   turtle.dig() turtle.digDown() turtle.down()
 end
 
+function clear()
+  term.clear()
+  term.setCursorPos(1,1)
+end
+
 -- main command
 
 posDown()
@@ -30,5 +35,4 @@ while not turtle.inspectDown("minecraft:dirt") do
   stepDown()
 end
 
-
-print("Big tree slain like it's nothing!")
+clear() print("Big tree slain like it's nothing!")
