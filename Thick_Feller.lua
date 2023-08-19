@@ -5,15 +5,15 @@ function posDown()
 end
 
 function stepUp()
-  turtle.dig() turtle.turnRight() turtle.dig() turtle.turnLeft() turtle.digUp() turtle.up()
+  turtle.dig() turtle.digUp() turtle.up()
 end
 
 function posUp()
-  turtle.dig() turtle.forward() turtle.turnRight()
+  turtle.turnRight() turtle.dig() turtle.forward() turtle.turnLeft()
 end
 
 function stepDown()
-  turtle.dig() turtle.down()
+  turtle.dig() turtle.digDown() turtle.down()
 end
 
 -- main command
@@ -26,8 +26,9 @@ end
 
 posUp()
 
-while not turtle.detectDown() do
+while not turtle.inspectDown("minecraft:dirt") do
   stepDown()
 end
+
 
 print("Big tree slain like it's nothing!")
