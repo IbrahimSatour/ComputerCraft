@@ -31,8 +31,8 @@ end
 
 posUp()
 
-while not turtle.inspectDown("minecraft:dirt") do
+repeat
   stepDown()
-end
+until turtle.inspectDown() = "minecraft:dirt"
 
 clear() print("Big tree slain like it's nothing!")
