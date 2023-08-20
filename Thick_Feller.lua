@@ -40,4 +40,6 @@ for i=1,height do
   stepDown()
 end
 
+turtle.dig()
+
 clear() print("Big tree slain like it's nothing!")
