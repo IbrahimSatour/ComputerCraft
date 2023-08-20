@@ -1,3 +1,7 @@
+-- variables
+
+height = 0
+
 -- functions
 
 function posDown()
@@ -27,12 +31,13 @@ posDown()
 
 while turtle.detect() do
   stepUp()
+  height = height + 1
 end
 
 posUp()
 
-repeat
+for i=1,height do
   stepDown()
-until turtle.inspectDown() == "minecraft:dirt"
+end
 
 clear() print("Big tree slain like it's nothing!")
