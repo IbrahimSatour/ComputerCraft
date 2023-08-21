@@ -1,5 +1,9 @@
 -- user input
 
+function clear()
+  term.clear()
+  term.setCursorPos(1,1)
+end
 
 clear() print("Please specify the diameter of your operation.")
 diameter = read()
@@ -11,11 +15,6 @@ height = read()
 layers = height / 2
 
 -- functions
-
-function clear()
-  term.clear()
-  term.setCursorPos(1,1)
-end
 
 function intoPos()
   for i=1,2 do turtle.digUp() turtle.up() end
