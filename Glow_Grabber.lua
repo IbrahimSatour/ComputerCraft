@@ -1,15 +1,12 @@
--- variables
-
-diameter
-
-steps = diameter - 1
-
-turns = (diameter / 2) - 1
-
 -- functions
 
+function clear()
+  term.clear()
+  term.setCursorPos(1,1)
+end
+
 function intoPos()
-  turtle.digUp() turtle.up() turtle.digUp() turtle.up()
+  for i=1,2 do turtle.digUp() turtle.up() end
 end
 
 function turnRight()
@@ -26,10 +23,25 @@ function digLane()
   end
 end
 
+function toZero()
+  turtle.turnRight() for i=1,steps do turtle.forward() end turtle.digDown() turtle.down()
+end
+
 function digLayer()
-  for i=1,diameter digLane() turnRight() digLane() turnLeft()
+  for i=1,turns do digLane() turnRight() digLane() turnLeft() end
+  digLane() turnRight() digLane() toZero()
+end
 
 -- main command
+
+clear() print("Please specify the diameter of your operation.")
+diameter = read()
+steps = diameter - 1
+turns = (diameter / 2) - 1
+
+clear() print("Please specify the height of your operation.")
+height = read()
+layers = height / 2
 
 while not turtle.detectUp() do
   turtle.up()
@@ -37,5 +49,10 @@ end
 
 intoPos()
 
+for i=1,layers do
+  digLayer()
+end
 
-
+while not turtle.detectDown() do
+  turtle.down()
+end
