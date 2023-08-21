@@ -30,7 +30,7 @@ end
 
 function digLane()
   for i=1,steps do
-    turtle.dig() turtle.forward turtle.digDown()
+    turtle.dig() turtle.forward() turtle.digDown()
   end
 end
 
