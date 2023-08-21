@@ -14,6 +14,8 @@ clear() print("Please specify the height of your operation.")
 height = read()
 layers = height / 2
 
+clear()
+
 -- functions
 
 function intoPos()
@@ -35,7 +37,7 @@ function digLane()
 end
 
 function toZero()
-  turtle.turnRight() for i=1,steps do turtle.forward() end turtle.digDown() turtle.down()
+  turtle.turnRight() for i=1,steps do turtle.forward() end turtle.turnRight() turtle.digDown() turtle.down()
 end
 
 function digLayer()
@@ -58,3 +60,5 @@ end
 while not turtle.detectDown() do
   turtle.down()
 end
+
+clear() print("Glowdust collected successfully!")
