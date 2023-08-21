@@ -1,3 +1,14 @@
+-- user input
+
+clear() print("Please specify the diameter of your operation.")
+diameter = read()
+steps = diameter - 1
+turns = (diameter / 2) - 1
+
+clear() print("Please specify the height of your operation.")
+height = read()
+layers = height / 2
+
 -- functions
 
 function clear()
@@ -33,15 +44,6 @@ function digLayer()
 end
 
 -- main command
-
-clear() print("Please specify the diameter of your operation.")
-diameter = read()
-steps = diameter - 1
-turns = (diameter / 2) - 1
-
-clear() print("Please specify the height of your operation.")
-height = read()
-layers = height / 2
 
 while not turtle.detectUp() do
   turtle.up()
