@@ -1,5 +1,6 @@
 -- user input
 
+
 clear() print("Please specify the diameter of your operation.")
 diameter = read()
 steps = diameter - 1
