@@ -1,3 +1,5 @@
+-- functions
+
 function dig32()
   for i = 1, 32 do
     while turtle.detect() do
@@ -32,3 +34,20 @@ function turnLeft()
   turtle.forward() turtle.digUp() turtle.digDown() turtle.turnLeft()
 end
 
+function comeHome()
+  turtle.turnLeft() turtle.forward() turtle.forward() turtle.down() turtle.turnLeft()
+  for i = 1, 31 do
+    turtle.forward()
+  end
+end
+
+--main
+
+turtle.up()
+dig32()
+turnRight()
+dig31()
+turnLeft()
+dig31()
+comeHome()
+clear() print("Tunnel cleared successfully!")
