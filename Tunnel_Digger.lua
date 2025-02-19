@@ -1,3 +1,6 @@
+-- dig a simple 3x3x32 tunnel
+-- start from bottom left
+
 -- functions
 
 function dig32()
