@@ -5,7 +5,11 @@ function dig32()
     while turtle.detect() do
       turtle.dig()
     end
-    turtle.forward() turtle.digUp() turtle.digDown()
+    turtle.forward() 
+    while turtle.detectUp() do
+      turtle.digUp()
+    end
+    turtle.digDown()
   end
 end
 
@@ -14,7 +18,11 @@ function dig31()
     while turtle.detect() do
       turtle.dig()
     end
-    turtle.forward() turtle.digUp() turtle.digDown()
+    turtle.forward()
+    while turtle.detectUp() do
+      turtle.digUp()
+    end
+    turtle.digDown()
   end
 end
 
