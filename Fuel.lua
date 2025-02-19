@@ -21,3 +21,10 @@ function fuelUp()
     turtle.select(i) turtle.refuel()
   end
 end
+
+-- main
+
+steps()
+comeHome()
+fuelUp()
+clear() print("10000 Fuel Added!")
