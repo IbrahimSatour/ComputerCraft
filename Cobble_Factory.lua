@@ -1,3 +1,3 @@
 while true do
-  turtle.dig()
+  turtle.digDown()
 end
