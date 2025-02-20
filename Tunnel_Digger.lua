@@ -1,5 +1,6 @@
 -- dig a simple 3x3x32 tunnel
 -- start from bottom left
+-- place 4 torches in first slot
 
 -- functions
 
@@ -47,8 +48,14 @@ end
 
 function comeHome()
   turtle.turnLeft() turtle.forward() turtle.forward() turtle.down() turtle.turnLeft()
-  for i = 1, 31 do
-    turtle.forward()
+  for i = 1, 4 do
+    for i = 1, 4 do
+      turtle.forward()
+    end
+    turtle.turnLeft() turtle.select(1) turtle.place() turtle.turnRight()
+    for i = 1, 4 do
+      turtle.forward()
+    end
   end
 end
 
