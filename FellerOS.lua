@@ -1,6 +1,6 @@
 -- variables
 
-treeSmall = true
+local treeSmall = true
 
 local steps = 0
 
@@ -28,7 +28,7 @@ end
 initialPos()
 
 -- check tree type
-blockType = turtle.inspect()
+local blockType = turtle.inspect()
 if blockType.name == "minecraft:oak_log" or "minecraft:spruce_log" or "minecraft:birch_log" or "minecraft:jungle_log" or "minecraft:acacia_log" or "minecraft:dark_oak_log" then
   treeSmall = false
 end
