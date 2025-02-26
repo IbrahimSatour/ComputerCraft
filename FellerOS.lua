@@ -1,3 +1,5 @@
+-- FellerOS
+
 -- variables
 
 local treeSmall = true
