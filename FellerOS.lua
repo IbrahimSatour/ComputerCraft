@@ -22,6 +22,7 @@ elseif turtle.inspect("minecraft:birch_log") then treeSmall = false
 elseif turtle.inspect("minecraft:jungle_log") then treeSmall = false
 elseif turtle.inspect("minecraft:acacia_log") then treeSmall = false
 elseif turtle.inspect("minecraft:dark_oak_log") then treeSmall = false
+else treeSmall = true
 end
 
 -- treeSmall true
