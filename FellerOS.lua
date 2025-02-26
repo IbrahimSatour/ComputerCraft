@@ -16,14 +16,17 @@ function clear() term.clear() term.setCursorPos(1,1) end
 initialPos()
 
 -- check tree type
-if turtle.inspect("minecraft:oak_log") then treeSmall = false
-elseif turtle.inspect("minecraft:spruce_log") then treeSmall = false
-elseif turtle.inspect("minecraft:birch_log") then treeSmall = false
-elseif turtle.inspect("minecraft:jungle_log") then treeSmall = false
-elseif turtle.inspect("minecraft:acacia_log") then treeSmall = false
-elseif turtle.inspect("minecraft:dark_oak_log") then treeSmall = false
-else treeSmall = true
+turtle.select(1)
+if turtle.compare() == true then
+  treeSmall = false
+else
+  treeSmall = true
 end
+
+
+
+
+
 
 -- treeSmall true
 if treeSmall == true then
