@@ -1,7 +1,7 @@
 function test()
   local data = turtle.inspectDown()
   if data.name == "minecraft:bedrock" then
-    break
+    os.exit()
   end
 end
 
