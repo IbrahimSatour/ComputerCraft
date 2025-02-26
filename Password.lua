@@ -1,20 +1,13 @@
 -- set password
-
 password = "superman"
 
 -- functions
-
-function clear()
-  term.clear()
-  term.setCursorPos(1,1)
-end
+function clear() term.clear() term.setCursorPos(1,1) end
 
 -- main command
-
 while true do
-  print("Please enter password")
+  print("Please enter passwordز")
   input = read("*")
-
   if input == password then
     print("Access granted.")
     redstone.setOutput("back", true)
