@@ -27,14 +27,14 @@ else
   treeSmall = true
 end
 
--- treeSmall true
+-- Small tree
 if treeSmall == true then
   print("Small tree detected.")
   while turtle.detectUp() do turtle.digUp() turtle.up() end
   while not turtle.detectDown() do turtle.down() end
 end
 
--- treeSmall false
+-- Large tree
 if treeSmall == false then
   print("Large tree detected.")
   while turtle.detectUp() do stepUp() end
