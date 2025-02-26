@@ -13,6 +13,8 @@ function clear() term.clear() term.setCursorPos(1,1) end
 
 -- main
 
+clear() print("Detecting tree size...")
+
 initialPos()
 
 -- check tree type
@@ -25,14 +27,14 @@ end
 
 -- treeSmall true
 if treeSmall == true then
-  clear() print("Small tree detected.")
+  print("Small tree detected.")
   while turtle.detectUp() do turtle.digUp() turtle.up() end
   while not turtle.detectDown() do turtle.down() end
 end
 
 -- treeSmall false
 if treeSmall == false then
-  clear() print("Large tree detected.")
+  print("Large tree detected.")
   while turtle.detectUp() do stepUp() end
   shift()
   for i = 1, steps do stepDown() end
