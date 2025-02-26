@@ -48,8 +48,8 @@ elseif turtle.inspect("minecraft:dark_oak_log") then
 end
 
 -- treeSmall true
-clear() print("Small tree detected!")
 if treeSmall == true then
+  clear() print("Small tree detected!")
   while turtle.detectUp() do
     turtle.digUp() turtle.up()
   end
@@ -59,8 +59,8 @@ if treeSmall == true then
 end
 
 -- treeSmall false
-clear() print("Large tree detected!")
 if treeSmall == false then
+  clear() print("Large tree detected!")
   while turtle.detectUp() do
     stepUp()
   end
