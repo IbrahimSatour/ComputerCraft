@@ -71,4 +71,4 @@ if treeSmall == false then
 end
 
 -- end
-clear() print("Tree chopped successfully!")
+print("Tree chopped successfully!")
