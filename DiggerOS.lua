@@ -1,6 +1,8 @@
 function test()
   local data = turtle.inspectDown()
-  if data.name == "minecraft:bedrock" then break end
+  if data.name == "minecraft:bedrock" then
+    break
+  end
 end
 
 while true do
