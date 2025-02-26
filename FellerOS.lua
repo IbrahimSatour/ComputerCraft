@@ -26,11 +26,10 @@ end
 initialPos()
 
 -- check tree type
+treeType = 1
 type = turtle.inspect()
 if type.name == "minecraft:oak_log" or "minecraft:spruce_log" or "minecraft:birch_log" or "minecraft:jungle_log" or "minecraft:acacia_log" or "minecraft:dark_oak_log" then
   treeType = 2
-else
-  treeType = 1
 end
 
 -- treeType 1
