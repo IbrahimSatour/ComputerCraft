@@ -1,7 +1,12 @@
-turtle.dig() turtle.forward()
+-- functions
+
+function initialPos()
+  turtle.dig() turtle.forward()
+end
+
+initialPos()
 
 -- check tree type
--- 1 is small - 2 is large
 
 local treeType = 1
 
@@ -10,3 +15,19 @@ if turtle.inspect(minecraft:log) then
 else
   treeType = 1
 end
+
+-- treeType 1
+
+if treeType == 1 then
+  while turtle.detectUp() do
+    turtle.digUp() turtle.up()
+  end
+  while not turtle.detectDown() do
+  turtle.down()
+  end
+end
+
+-- treeType 2
+
+if treeType == 2 then
+  
