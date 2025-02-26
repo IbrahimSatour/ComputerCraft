@@ -19,11 +19,7 @@ initialPos()
 
 -- check tree type
 turtle.select(1)
-if turtle.compare() == true then
-  treeSmall = false
-else
-  treeSmall = true
-end
+if turtle.compare() == true then treeSmall = false else treeSmall = true end
 
 -- Small tree
 if treeSmall == true then
