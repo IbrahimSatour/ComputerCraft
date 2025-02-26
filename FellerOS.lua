@@ -23,11 +23,6 @@ else
   treeSmall = true
 end
 
-
-
-
-
-
 -- treeSmall true
 if treeSmall == true then
   clear() print("Small tree detected.")
