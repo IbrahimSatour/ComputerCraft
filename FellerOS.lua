@@ -28,8 +28,8 @@ end
 initialPos()
 
 -- check tree type
-local blockType = turtle.inspect()
-if blockType.name == "minecraft:oak_log" or "minecraft:spruce_log" or "minecraft:birch_log" or "minecraft:jungle_log" or "minecraft:acacia_log" or "minecraft:dark_oak_log" then
+local data = turtle.inspect()
+if data.name == "minecraft:cobblestone" or "minecraft:dirt" or "minecraft:gravel" or "minecraft:sand" then
   treeSmall = false
 end
 
