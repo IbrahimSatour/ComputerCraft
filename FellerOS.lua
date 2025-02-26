@@ -1,10 +1,8 @@
 -- variables
-
 local treeSmall = true
 local steps = 0
 
 -- functions
-
 function initialPos() turtle.dig() turtle.forward() end
 function stepUp() turtle.dig() turtle.digUp() turtle.up() steps = steps + 1 end
 function stepDown() turtle.digDown() turtle.down() turtle.dig() end
@@ -12,7 +10,6 @@ function shift() turtle.dig() turtle.turnRight() turtle.dig() turtle.forward() t
 function clear() term.clear() term.setCursorPos(1,1) end
 
 -- main
-
 clear() print("Detecting tree size...")
 
 initialPos()
