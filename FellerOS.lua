@@ -27,7 +27,17 @@ initialPos()
 
 -- check tree type
 local treeType = 1
-if turtle.inspect(minecraft:oak_log, minecraft:spruce_log, minecraft:birch_log, minecraft:jungle_log, minecraft:acacia_log, minecraft:dark_oak_log) then
+if turtle.inspect(minecraft:oak_log) then
+  treeType = 2
+elseif turtle.inspect(minecraft:spruce_log) then
+  treeType = 2
+elseif turtle.inspect(minecraft:birch_log) then
+  treeType = 2
+elseif turtle.inspect(minecraft:jungle_log) then
+  treeType = 2
+elseif turtle.inspect(minecraft:acacia_log) then
+  treeType = 2
+elseif turtle.inspect(minecraft:dark_oak_log) then
   treeType = 2
 else
   treeType = 1
