@@ -1,5 +1,7 @@
 -- variables
 
+treeSmall = true
+
 local steps = 0
 
 -- functions
@@ -26,14 +28,13 @@ end
 initialPos()
 
 -- check tree type
-treeType = 1
-type = turtle.inspect()
-if type.name == "minecraft:oak_log" or "minecraft:spruce_log" or "minecraft:birch_log" or "minecraft:jungle_log" or "minecraft:acacia_log" or "minecraft:dark_oak_log" then
-  treeType = 2
+blockType = turtle.inspect()
+if blockType.name == "minecraft:oak_log" or "minecraft:spruce_log" or "minecraft:birch_log" or "minecraft:jungle_log" or "minecraft:acacia_log" or "minecraft:dark_oak_log" then
+  treeSmall = false
 end
 
--- treeType 1
-if treeType == 1 then
+-- treeSmall true
+if treeSmall == true then
   while turtle.detectUp() do
     turtle.digUp() turtle.up()
   end
@@ -42,9 +43,9 @@ if treeType == 1 then
   end
 end
 
--- treeType 2
+-- treeSmall false
 
-if treeType == 2 then
+if treeSmall == false then
   while turtle.detectUp() do
     stepUp()
   end
