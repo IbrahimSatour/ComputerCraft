@@ -1,6 +1,5 @@
 -- functions
 function clear() term.clear() term.setCursorPos(1,1) end
-function placeTorch() turtle.turnRight() turtle.select(1) turtle.place() turtle.turnLeft() end
 
 function step()
   while turtle.detect() do turtle.dig() sleep(0.5) end turtle.forward()
@@ -8,6 +7,8 @@ function step()
 end
 
 function turnAround() turtle.turnRight() step() turtle.turnRight() end
+
+function placeTorch() turtle.turnRight() turtle.select(1) turtle.place() turtle.turnLeft() end
 
 -- user input
 clear() print("Welcome to TunnelOS!") sleep(1) print("Please enter the desired length for your tunnel...")
