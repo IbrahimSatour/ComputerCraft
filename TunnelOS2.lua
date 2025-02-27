@@ -34,3 +34,6 @@ end
 
 turnAround()
 
+while true do
+  if length > 10 do
+    for i = 1, 10 do step() end
