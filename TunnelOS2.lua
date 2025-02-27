@@ -1,5 +1,4 @@
 -- functions
-function initialPos() turtle.up() end
 function clear() term.clear() term.setCursorPos(1,1) end
 function placeTorch() turtle.turnRight() turtle.select(1) turtle.place() turtle.turnLeft() end
 
@@ -23,19 +22,15 @@ clear() print("Tunnel length is set to "..length) sleep(1) print("Initiating min
 clear() print("Mining sequence in progress...")
 
 -- main
-initialPos()
+turtle.up()
 
-for i = 1, length do
-  step()
-end
+for i = 1, length do step() end
 
 turnAround()
 
 while true do
   if length > 10 then
-    for i = 1, 10 do
-      step()
-    end
+    for i = 1, 10 do step() end
     placeTorch()
     length = length - 10
   else
