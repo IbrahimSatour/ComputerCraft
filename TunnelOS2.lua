@@ -41,5 +41,7 @@ while true do
     end
     placeTorch()
     length = length - 10
+  else
+    break
   end
 end
