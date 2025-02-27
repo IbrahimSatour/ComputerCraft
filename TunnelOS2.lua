@@ -4,18 +4,14 @@ function clear() term.clear() term.setCursorPos(1,1) end
 function placeTorch() turtle.turnRight() turtle.select(1) turtle.place() turtle.turnLeft() end
 
 function step()
-  while turtle.detect() do turtle.dig() sleep(0.5) end
-  turtle.forward()
-  while turtle.detectUp() do turtle.digUp() sleep(0.5) end
-  turtle.digDown()
+  while turtle.detect() do turtle.dig() sleep(0.5) end turtle.forward()
+  while turtle.detectUp() do turtle.digUp() sleep(0.5) end turtle.digDown()
 end
 
 function turnAround()
   turtle.turnRight()
-  while turtle.detect() do turtle.dig() sleep(0.5) end
-  turtle.forward()
-  while turtle.detectUp() do turtle.digUp() sleep(0.5) end
-  turtle.digDown()
+  while turtle.detect() do turtle.dig() sleep(0.5) end turtle.forward()
+  while turtle.detectUp() do turtle.digUp() sleep(0.5) end turtle.digDown()
   turtle.turnRight()
 end
 
@@ -24,7 +20,7 @@ clear() print("Welcome to TunnelOS!") sleep(1) print("Please enter the desired l
 local input = read()
 local length = tonumber(input)
 clear() print("Tunnel length is set to "..length) sleep(1) print("Initiating mining sequence...") sleep(1)
-print("Mining sequence in progress...")
+clear() print("Mining sequence in progress...")
 
 -- main
 initialPos()
@@ -52,3 +48,5 @@ for i = 1, length do
 end
 
 turtle.down()
+
+clear() print("Tunnel finished successfully!")
