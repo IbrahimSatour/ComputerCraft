@@ -21,7 +21,8 @@ end
 
 -- user input
 clear() print("Welcome to TunnelOS!") sleep(1) print("Please enter the desired length for your tunnel...")
-local length = read("*")
+local input = read()
+local length = tonumber(input)
 clear() print("Tunnel length is set to "..length) sleep(1) print("Initiating mining sequence...") sleep(1)
 print("Mining sequence in progress...")
 
@@ -51,8 +52,3 @@ for i = 1, length do
 end
 
 turtle.down()
-
-
-
-
-  
