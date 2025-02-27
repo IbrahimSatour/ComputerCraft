@@ -7,12 +7,7 @@ function step()
   while turtle.detectUp() do turtle.digUp() sleep(0.5) end turtle.digDown()
 end
 
-function turnAround()
-  turtle.turnRight()
-  while turtle.detect() do turtle.dig() sleep(0.5) end turtle.forward()
-  while turtle.detectUp() do turtle.digUp() sleep(0.5) end turtle.digDown()
-  turtle.turnRight()
-end
+function turnAround() turtle.turnRight() step() turtle.turnRight() end
 
 -- user input
 clear() print("Welcome to TunnelOS!") sleep(1) print("Please enter the desired length for your tunnel...")
