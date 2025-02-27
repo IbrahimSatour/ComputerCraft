@@ -19,9 +19,7 @@ clear() print("Mining sequence in progress...")
 
 -- main
 turtle.up()
-
 for i = 1, length do step() end
-
 turnAround()
 
 while true do
@@ -38,6 +36,4 @@ for i = 1, length do
     step()
 end
 
-turtle.down()
-
-clear() print("Tunnel finished successfully!")
+turtle.down() clear() print("Tunnel finished successfully!")
