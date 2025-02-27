@@ -14,4 +14,4 @@ end
 
 clear() print("Welcome to TunnelOS!") sleep(1) print("Please enter the desired length for your tunnel...")
 local length = read("*")
-clear() print("Tunnel length is set to"+ length)
+clear() print("Tunnel length is set to".. length)
