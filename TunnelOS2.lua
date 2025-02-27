@@ -45,3 +45,10 @@ while true do
     break
   end
 end
+
+for i = 1, length do
+    turtle.forward()
+end
+
+turtle.down()
+  
