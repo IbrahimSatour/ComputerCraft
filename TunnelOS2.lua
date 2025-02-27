@@ -35,7 +35,7 @@ end
 turnAround()
 
 while true do
-  if length > 10 do
+  if length > 10 then
     for i = 1, 10 do
       step()
     end
@@ -51,4 +51,8 @@ for i = 1, length do
 end
 
 turtle.down()
+
+
+
+
   
