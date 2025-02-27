@@ -6,7 +6,7 @@ function clear() term.clear() term.setCursorPos(1,1) end
 
 -- main command
 while true do
-  print("Please enter passwordز")
+  print("Please enter password...")
   input = read("*")
   if input == password then
     print("Access granted.")
