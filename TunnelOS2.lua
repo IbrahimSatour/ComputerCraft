@@ -48,7 +48,7 @@ while true do
 end
 
 for i = 1, length do
-    turtle.forward()
+    step()
 end
 
 turtle.down()
