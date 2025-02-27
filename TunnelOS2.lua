@@ -36,4 +36,10 @@ turnAround()
 
 while true do
   if length > 10 do
-    for i = 1, 10 do step() end
+    for i = 1, 10 do
+      step()
+    end
+    placeTorch()
+    length = length - 10
+  end
+end
