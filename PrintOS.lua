@@ -1,3 +1,14 @@
+-- document
+function document()
+  printer.write("a")
+  
+  printer.setCursorPos(1, 3)
+  printer.write("a")
+
+  printer.setPageTitle("a")
+  printer.endPage()
+end
+
 -- printer wrapping
 local printer = peripheral.wrap("left")
 
@@ -11,13 +22,7 @@ end
 
 -- print
 if printer.newPage() then
-  printer.write("a")
-  
-  printer.setCursorPos(1, 3)
-  printer.write("a")
-
-  printer.setPageTitle("a")
-  printer.endPage()
+  document()
 else
   error("Page could not be created.")
 end
