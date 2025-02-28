@@ -10,4 +10,5 @@ while true do
     turtle.placeDown()
   else
     break
+  end
 end
