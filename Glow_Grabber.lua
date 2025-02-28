@@ -1,9 +1,5 @@
 -- user input
-
-function clear()
-  term.clear()
-  term.setCursorPos(1,1)
-end
+function clear() term.clear() term.setCursorPos(1,1) end
 
 clear() print("Please specify the diameter of your operation.")
 diameter = read()
