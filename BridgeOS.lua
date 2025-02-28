@@ -8,5 +8,6 @@ while true do
     turtle.forward()
     turtle.select(1)
     turtle.placeDown()
-  end
+  else
+    break
 end
