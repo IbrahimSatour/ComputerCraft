@@ -9,7 +9,7 @@ function step()
 end
 
 function step10() for i = 1, 10 do step() end end
-function step10() for i = 1, 30 do step() end end
+function step30() for i = 1, 30 do step() end end
 
 function turnRight() turtle.turnRight() step() turtle.turnRight() end
 function turnLeft() turtle.turnLeft() step() turtle.turnLeft() end
