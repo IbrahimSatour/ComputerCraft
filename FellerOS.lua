@@ -29,6 +29,7 @@ end
 if treeSmall == false then
   print("Large tree detected.")
   while turtle.detectUp() do stepUp() end
+  stepUp()
   shift()
   for i = 1, steps do stepDown() end
 end
