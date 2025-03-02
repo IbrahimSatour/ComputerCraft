@@ -6,3 +6,4 @@ while true do
     turtle.dropDown(64)
   end
 end
+os.reboot()
