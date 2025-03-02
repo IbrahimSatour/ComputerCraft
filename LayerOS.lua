@@ -11,6 +11,7 @@ function attemptRight()
     right = true
   else
     turtle.turnLeft()
+    break
   end
 end
 
@@ -18,6 +19,8 @@ function attemptForward()
   if turtle.detect() then
     step()
     forward = true
+  else
+    break
   end
 end
 
@@ -33,4 +36,15 @@ end
 
 while true do
   attemptRight()
-  
+
+  if right == false then
+    attemptForward()
+  end
+
+  if right == false then
+    if forward == false then
+      attemptLeft()
+    end
+  end
+
+end
