@@ -2,6 +2,8 @@ local right = false
 local forward = false
 local left = false
 
+-- functions
+
 function step() turtle.dig() turtle.forward() end
 
 function attemptRight()
@@ -33,6 +35,8 @@ function attemptLeft()
     os.reboot()
   end
 end
+
+--main
 
 while true do
   attemptRight()
