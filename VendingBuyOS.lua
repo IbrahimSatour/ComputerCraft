@@ -8,6 +8,7 @@ if type.name == "minecraft:emerald" then
     rednet.send(4, count)
   else
     print("You can buy a maximum of 16 stacks at a time.")
+  end
 else
   print("No emeralds found!")
 end
