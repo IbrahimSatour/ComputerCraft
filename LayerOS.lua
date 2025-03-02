@@ -2,31 +2,28 @@ local right = false
 local forward = false
 local left = false
 
-function stepRight() trutle.turnRight() turtle.dig() turtle.forward() end
 function step() turtle.dig() turtle.forward() end
-function stepLeft() trutle.turnLeft() turtle.dig() turtle.forward() end
 
-while true do
-  
-  if turtle.detectRight() then
-    stepRight()
-    right = true
+function attemptRight()
+  turtle.turnRight()
+  if turtle.detect() then
+    step()
+  else
+    turtle.turnLeft()
   end
+end
 
-  if right == false then
-    if turtle.detect() then
-      step()
-      forward = true
-    end
+function attemptForward()
+  if turtle.detect() then
+    step()
   end
+end
 
-  if right == false then
-    if forward == false then
-      if turtle.detectLeft() then
-        stepLeft()
-        left = true
-      end
-    end
+function attemptLeft()
+  turtle.turnLeft()
+  if turtle.detect() then
+    step()
+  else
+    os.reboot()
   end
-
 end
