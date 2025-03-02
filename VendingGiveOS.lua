@@ -1,4 +1,5 @@
 while true do
+  term.clear()
   rednet.open("right")
   local order = rednet.receive()
   for i = 1, order do
