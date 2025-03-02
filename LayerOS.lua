@@ -57,8 +57,6 @@ while true do
   if right == false then
     if forward == false then
       attemptLeft()
-    else
-      search()
     end
   end
 end
