@@ -48,3 +48,21 @@ while true do
   end
 
 end
+
+while not turtle.detect() do
+  for i = 1, 4 do
+    turtle.turnLeft()
+    for n = 1, i do
+      turtle.forward()
+    end
+  end
+end
+    
+
+
+
+
+
+
+
+  
