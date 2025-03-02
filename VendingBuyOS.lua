@@ -2,7 +2,12 @@ local type = turtle.getItemDetail(1)
 local count = turtle.getItemCount(1)
 
 if type.name == "minecraft:emerald" then
-  turtle.drop(count)
-  rednet.open("right")
-  rednet.send(4, count)
+  if count < 17 then
+    turtle.drop(count)
+    rednet.open("right")
+    rednet.send(4, count)
+  else
+    print("You can buy a maximum of 16 stacks at a time.")
+else
+  print("No emeralds found!")
 end
