@@ -54,9 +54,11 @@ while true do
     attemptForward()
   end
 
-  if forward == false then
-    attemptLeft()
-  else
-    search()
+  if right == false then
+    if forward == false then
+      attemptLeft()
+    else
+      search()
+    end
   end
 end
