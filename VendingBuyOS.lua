@@ -7,11 +7,14 @@ if type.name == "minecraft:emerald" then
     turtle.drop(count)
     rednet.open("right")
     rednet.send(4, count)
+    print("Buying "count" stacks...")
+    sleep(10)
   else
     print("You can buy a maximum of 16 stacks at a time.")
+    sleep(5)
   end
 else
   print("No emeralds found!")
+  sleep(5)
 end
-sleep(10)
 os.reboot()
