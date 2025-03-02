@@ -7,7 +7,7 @@ local type = turtle.getItemDetail(1)
 local count = turtle.getItemCount(1)
 
 term.clear()
-if not count == 0 then
+While not count == 0 then
   if type.name == "minecraft:emerald" then
     if count < 17 then
       turtle.drop(count)
