@@ -49,12 +49,7 @@ while true do
 end
 
 while turtle.detect() == false do
-  for i = 1, 4 do
-    turtle.turnLeft()
-    for n = 1, i do
-      turtle.forward()
-    end
-  end
+  turtle.forward()
 end
 
 
