@@ -11,7 +11,7 @@ function attemptRight()
     right = true
   else
     turtle.turnLeft()
-    break
+    right = false
   end
 end
 
@@ -20,7 +20,7 @@ function attemptForward()
     step()
     forward = true
   else
-    break
+    forward = false
   end
 end
 
