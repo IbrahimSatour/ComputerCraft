@@ -36,6 +36,15 @@ function attemptLeft()
   end
 end
 
+function search()
+  for i = 1, 3 do
+    turtle.turnLeft()
+    for n = 1, i do
+      turtle.forward()
+    end
+  end
+end
+
 --main
 
 while true do
@@ -45,22 +54,11 @@ while true do
     attemptForward()
   end
 
-  if right == false then
-    if forward == false then
-      attemptLeft()
+  if forward == false then
+    attemptLeft()
+  else
+    while turtle.detect() == false do
+      search()
     end
   end
 end
-
-while turtle.detect() == false do
-  turtle.forward()
-end
-
-
-
-
-
-
-
-
-  
