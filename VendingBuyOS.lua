@@ -7,7 +7,11 @@ local type = turtle.getItemDetail(1)
 local count = turtle.getItemCount(1)
 
 term.clear()
-While not count == 0 then
+if count == 0 then
+  clear()
+  print("No emeralds found!")
+  sleep(5)
+else
   if type.name == "minecraft:emerald" then
     if count < 17 then
       turtle.drop(count)
@@ -24,9 +28,5 @@ While not count == 0 then
     print("No emeralds found!")
     sleep(5)
   end
-else
-  clear()
-  print("No emeralds found!")
-  sleep(5)
 end
 os.reboot()
