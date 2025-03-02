@@ -48,7 +48,7 @@ while true do
   end
 end
 
-while not turtle.detect() do
+while turtle.detect() == false do
   for i = 1, 4 do
     turtle.turnLeft()
     for n = 1, i do
