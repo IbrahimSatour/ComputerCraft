@@ -57,8 +57,6 @@ while true do
   if forward == false then
     attemptLeft()
   else
-    while turtle.detect() == false do
-      search()
-    end
+    search()
   end
 end
