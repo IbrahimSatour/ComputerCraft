@@ -46,7 +46,6 @@ while true do
       attemptLeft()
     end
   end
-
 end
 
 while not turtle.detect() do
@@ -57,7 +56,7 @@ while not turtle.detect() do
     end
   end
 end
-    
+
 
 
 
