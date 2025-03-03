@@ -20,13 +20,11 @@ function checkStock()
 end
 
 function makeTrade()
-  if message then
-    local senderId, message = rednet.receive()
-    local count = message
-    for i = 1, count do
-      turtle.select(i)
-      turtle.dropDown()
-    end
+  local senderId, message = rednet.receive()
+  local count = message
+  for i = 1, count do
+    turtle.select(i)
+    turtle.dropDown()
   end
 end
 
@@ -37,7 +35,7 @@ while true do
   checkStock()
 
   if stock == true then
-    makeTade()
+    makeTrade()
   end
   
   os.reboot()
