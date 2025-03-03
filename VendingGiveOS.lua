@@ -1,5 +1,6 @@
 -- variables
 
+local count = 0
 local stock = true
 
 -- functions
@@ -27,18 +28,21 @@ function makeTrade()
     turtle.select(i)
     turtle.dropDown()
   end
+  local name1 = "Sold"
+  local name2 = "stacks."
+  print(name1, num, name2)
 end
 
 -- main
 
 while true do
 
+  rednet.open("right")
+
   checkStock()
 
   if stock == true then
     makeTrade()
   end
-  
-  os.reboot()
 
 end
