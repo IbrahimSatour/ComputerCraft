@@ -22,7 +22,8 @@ end
 function makeTrade()
   local senderId, message = rednet.receive()
   local count = message
-  for i = 1, count do
+  local num = tonumber(count)
+  for i = 1, num do
     turtle.select(i)
     turtle.dropDown()
   end
