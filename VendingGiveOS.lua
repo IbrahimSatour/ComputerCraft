@@ -1,3 +1,7 @@
+-- variables
+
+local stock = true
+
 -- functions
 
 function clear() term.clear() term.setCursorPos(1, 1) end
@@ -9,17 +13,19 @@ function checkStock()
       if turtle.getItemCount(i) < 64 then
         rednet.open("right")
         rednet.send(0, "no")
+        stock = false
       end
     end
   end
 end
 
 function makeTrade()
-  local senderId, message = rednet.receive(nil, 1)
-  local count = message
   if message then
-    for i = 1, i do
-      turtle.dropDown(i)
+    local senderId, message = rednet.receive()
+    local count = message
+    for i = 1, count do
+      turtle.select(i)
+      turtle.dropDown()
     end
   end
 end
@@ -30,7 +36,9 @@ while true do
 
   checkStock()
 
-  makeTrade()
+  if stock == true then
+    makeTade()
+  end
   
   os.reboot()
 
