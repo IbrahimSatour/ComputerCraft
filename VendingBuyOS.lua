@@ -36,19 +36,19 @@ if stock == true then
         local name2 = "stacks..."
         clear() print(name1, count, name2) sleep(5) clear()
       else
-        clear() print("You can only buy a maximum of 16 stacks at a time!")
+        clear() print("You can only buy a maximum of 16 stacks at a time!") rednet.send(1, "clearError")
         sleep(5) os.reboot()
       end
     else
-      clear() print("You can only buy using emeralds!")
+      clear() print("You can only buy using emeralds!") rednet.send(1, "clearError")
       sleep(5) os.reboot()
     end
   else
-    clear() print("No emeralds were found in the first slot!")
+    clear() print("No emeralds were found in the first slot!") rednet.send(1, "clearError")
     sleep(5) os.reboot()
   end
 else
-  clear() print("The shop is out of stock! Sorry for the inconvenience.")
+  clear() print("The shop is out of stock! Sorry for the inconvenience.") rednet.send(1, "clearError")
   sleep(5) os.reboot()
 end
 
