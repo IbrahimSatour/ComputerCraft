@@ -9,7 +9,7 @@ function checkStock()
       if turtle.getItemCount(i) < 64 then
         rednet.open("right")
         rednet.send(0, "no")
-        print("no stock")
+        os.reboot()
       else
         rednet.open("right")
         rednet.send(0, "yes")
@@ -18,12 +18,21 @@ function checkStock()
   end
 end
 
+function makeTrade()
+  local senderId, message = rednet.receive()
+  local count = message
+  for i = 1, i do
+    turtle.drop(i)
+  end
+end
 
 -- main
 
 while true do
 
   checkStock()
+
+  makeTrade()
 
   os.reboot()
 
