@@ -9,9 +9,9 @@ local stock = false
 function clear() term.clear() term.setCursorPos(1, 1) end
 
 function checkStock()
-  rednet.open("left")
+  rednet.open("right")
   rednet.send(1, "check")
-  if rednet.receive() == yes then
+  if rednet.receive() == "yes" then
     stock = true
   end
 end
@@ -31,13 +31,17 @@ if stock == true then
         makeTrade()
       else
         clear() print("You can only buy a maximum of 16 stacks at a time!")
+        sleep(5) clear()
       end
     else
       clear() print("You can only buy using emeralds!")
+      sleep(5) clear()
     end
   else
     clear() print("No emeralds were found!")
+    sleep(5) clear()
   end
 else
   clear() print("The shop is out of stock! Sorry for the inconvenience.")
+  sleep(5) clear()
 end
