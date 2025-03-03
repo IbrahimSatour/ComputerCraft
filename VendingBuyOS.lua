@@ -2,7 +2,7 @@
 
 local count = turtle.getItemCount(1)
 local type = turtle.getItemDetail(1)
-local stock = false
+local stock = true
 
 -- functions
 
@@ -11,8 +11,10 @@ function clear() term.clear() term.setCursorPos(1, 1) end
 function checkStock()
   rednet.open("right")
   rednet.send(1, "check")
-  if rednet.receive() == "yes" then
-    stock = true
+  local senderId, message = rednet.receive()
+  if message == 0 then
+    stock = false
+    print("no stock")
   end
 end
 
@@ -24,24 +26,26 @@ end
 
 -- main
 
+checkStock()
+
 if stock == true then
-  if turtle.getItemCount() then
+  if count > 0 then
     if type.name == "minecraft:emerald" then
       if count < 17 then
         makeTrade()
       else
-        clear() print("You can only buy a maximum of 16 stacks at a time!")
+        print("You can only buy a maximum of 16 stacks at a time!")
         sleep(5) clear()
       end
     else
-      clear() print("You can only buy using emeralds!")
+      print("You can only buy using emeralds!")
       sleep(5) clear()
     end
   else
-    clear() print("No emeralds were found!")
+    print("No emeralds were found in the first slot!")
     sleep(5) clear()
   end
 else
-  clear() print("The shop is out of stock! Sorry for the inconvenience.")
+  print("The shop is out of stock! Sorry for the inconvenience.")
   sleep(5) clear()
 end
