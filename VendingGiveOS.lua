@@ -38,8 +38,6 @@ while true do
 
   rednet.open("right")
 
-  clearError()
-
   checkStock()
 
   if stock == true then
