@@ -1,6 +1,6 @@
 -- variables
 
-local count = 0
+local count = 1
 local stock = true
 
 -- functions
