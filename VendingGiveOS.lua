@@ -20,10 +20,9 @@ function checkStock()
 end
 
 function makeTrade()
-  local senderId, message = rednet.receive()
-  local count = message
-  local num = tonumber(count)
-  for i = 1, num do
+  local senderID, message = rednet.receive()
+  local count = tonumber(message)
+  for i = 1, count do
     turtle.select(i)
     turtle.dropDown()
   end
