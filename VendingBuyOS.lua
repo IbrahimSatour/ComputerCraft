@@ -33,19 +33,19 @@ if stock == true then
       if count < 17 then
         makeTrade()
       else
-        print("You can only buy a maximum of 16 stacks at a time!")
+        clear() print("You can only buy a maximum of 16 stacks at a time!")
         sleep(5) clear()
       end
     else
-      print("You can only buy using emeralds!")
+      clear() print("You can only buy using emeralds!")
       sleep(5) clear()
     end
   else
-    print("No emeralds were found in the first slot!")
+    clear() print("No emeralds were found in the first slot!")
     sleep(5) clear()
   end
 else
-  print("The shop is out of stock! Sorry for the inconvenience.")
+  clear() print("The shop is out of stock! Sorry for the inconvenience.")
   sleep(5) clear()
 end
 
