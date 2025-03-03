@@ -14,7 +14,8 @@ function checkStock()
   local senderId, message = rednet.receive()
   if message == "no" then
     stock = false
-    print("no stock")
+  else
+    stock = true
   end
 end
 
