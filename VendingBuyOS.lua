@@ -1,6 +1,6 @@
 -- variables
 
-local count = turtle.getItemCount(1)
+local count = turtle.getItemCount()
 local type = turtle.getItemDetail(1)
 local stock = true
 
@@ -11,16 +11,14 @@ function clear() term.clear() term.setCursorPos(1, 1) end
 function checkStock()
   rednet.open("right")
   rednet.send(1, "check")
-  local senderId, message = rednet.receive()
+  local senderId, message = rednet.receive(nil, 1)
   if message == "no" then
     stock = false
-  else
-    stock = true
   end
 end
 
 function makeTrade()
-  turtle.drop(1)
+  turtle.drop()
   rednet.open("right")
   rednet.send(1, count)
 end
@@ -50,3 +48,4 @@ else
   print("The shop is out of stock! Sorry for the inconvenience.")
   sleep(5) clear()
 end
+
