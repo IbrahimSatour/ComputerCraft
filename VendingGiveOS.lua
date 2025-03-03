@@ -1,6 +1,5 @@
 -- variables
 
-local count = 1
 local stock = true
 
 -- functions
@@ -38,6 +37,8 @@ end
 while true do
 
   rednet.open("right")
+
+  clearError()
 
   checkStock()
 
