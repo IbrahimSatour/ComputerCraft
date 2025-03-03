@@ -12,7 +12,7 @@ function checkStock()
   rednet.open("right")
   rednet.send(1, "check")
   local senderId, message = rednet.receive()
-  if message == 0 then
+  if message == "no" then
     stock = false
     print("no stock")
   end
