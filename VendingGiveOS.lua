@@ -2,11 +2,16 @@
 
 function clear() term.clear() term.setCursorPos(1, 1) end
 
+function checkStock()
+  local senderId, message = rednet.receive()
+  if message == "check" then
+    print("received")
+  end
+end
+
+
 -- main
 
 clear()
 
-rednet.open("right")
-if rednet.receive() == "check" then
-  print("check received")
-end
+checkStock()
