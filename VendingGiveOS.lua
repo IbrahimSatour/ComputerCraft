@@ -1,10 +1,12 @@
-while true do
-  term.clear()
-  rednet.open("right")
-  local order = rednet.receive()
-  for i = 1, order do
-    turtle.select(i)
-    turtle.dropDown(64)
+rednet.open("left")
+if rednet.receive() == "check" then
+  for i = 1, 16 do
+    if not turtle.getItemDetail(i) == 64 then
+      rednet.open("left")
+      rednet.send(0, "no")
+    else
+      rednet.open("left")
+      rednet.send(0, "yes")
+    end
   end
 end
-os.reboot()
