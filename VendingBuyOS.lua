@@ -21,3 +21,23 @@ function makeTrade()
   rednet.open("right")
   rednet.send(1, count)
 end
+
+-- main
+
+if stock == true then
+  if turtle.getItemCount() then
+    if type.name == "minecraft:emerald" then
+      if count < 17 then
+        makeTrade()
+      else
+        print("You can only buy a maximum of 16 stacks at a time!")
+      end
+    else
+      print("You can only buy using emeralds!")
+    end
+  else
+    print("No emeralds were found!")
+  end
+else
+  print("The shop is out of stock! Sorry for the inconvenience.")
+end
