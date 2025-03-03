@@ -37,18 +37,18 @@ if stock == true then
         clear() print(name1, count, name2) sleep(5) clear()
       else
         clear() print("You can only buy a maximum of 16 stacks at a time!")
-        sleep(5) clear()
+        sleep(5) os.reboot()
       end
     else
       clear() print("You can only buy using emeralds!")
-      sleep(5) clear()
+      sleep(5) os.reboot()
     end
   else
     clear() print("No emeralds were found in the first slot!")
-    sleep(5) clear()
+    sleep(5) os.reboot()
   end
 else
   clear() print("The shop is out of stock! Sorry for the inconvenience.")
-  sleep(5) clear()
+  sleep(5) os.reboot()
 end
 
