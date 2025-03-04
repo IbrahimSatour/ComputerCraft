@@ -20,26 +20,26 @@ end
 -- filtering
 if stock == false then
   rednet.send(1, "noTrade")
-  clear() print("The shop is out of stock! Sorry for the inconvenience.")
-  sleep(5) os.reboot()
+  clear() print("Out of stock! Sorry for the inconvenience.")
+  sleep(3) os.reboot()
 end
 
 if count == 0 then
   rednet.send(1, "noTrade")
-  clear() print("No emeralds were found in the first slot!")
-  sleep(5) os.reboot()
+  clear() print("No emeralds found!")
+  sleep(3) os.reboot()
 end
 
 if type.name ~= "minecraft:emerald" then
   rednet.send(1, "noTrade")
   clear() print("You can only buy using emeralds!")
-  sleep(5) os.reboot()
+  sleep(3) os.reboot()
 end
 
 if count > 16 then
   rednet.send(1, "noTrade")
   clear() print("You can only buy a maximum of 16 stacks at a time!")
-  sleep(5) os.reboot()
+  sleep(3) os.reboot()
 end
 
 -- trade
