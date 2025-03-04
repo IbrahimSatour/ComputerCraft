@@ -45,5 +45,5 @@ end
 -- trade
 turtle.drop()
 
--- reset
+-- reboot
 os.reboot()
