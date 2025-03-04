@@ -33,4 +33,5 @@ if trade == true then
   end
 end
 
+-- reboot
 os.reboot()
