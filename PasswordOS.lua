@@ -4,7 +4,7 @@ password = "superman"
 -- functions
 function clear() term.clear() term.setCursorPos(1,1) end
 
--- main command
+-- main
 while true do
   print("Please enter password...")
   input = read("*")
