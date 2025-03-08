@@ -14,7 +14,7 @@ function turnLeft() turtle.turnLeft() step() turtle.turnLeft() end
 
 function light()
   local type = turtle.getItemDetail(1)
-  if type.name == minecraft:torch then
+  if type.name == "minecraft:torch" then
     turtle.select(1) turtle.placeDown()
   end
 end
